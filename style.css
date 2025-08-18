@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yesteryear&display=swap');
+
+img {
+    width: 100%;
+}
+
+/* :root {
+    --main-color:hsl(0, 0%, 8%) ;
+    --sec-color: hsl(0, 0%, 12%);
+    --third-color: hsl(0, 0%, 20%);
+    --fourth-color: hsl(0, 0%, 100%);
+    --fifth-color:  hsl(75, 94%, 57%);
+    --sixth-color: hsl(228, 45%, 44%);
+} 
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif ;
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.body-content-wrapper {
+    width: clamp(32rem, 90%, 37.5rem);
+    margin-block: calc(10rem + 1vh);
+    margin-inline: auto;
+}
+
+.profile-card {
+    width: calc(100% - 5rem);
+    margin-block: calc(5rem + 1vh);
+    margin-inline: auto;
+    background-color: var(--sec-color);
+    padding: 5%;
+    border-radius:calc(0.2rem + 1%) ;
+}
+
+.user-avatar {
+    width: calc(2rem + 20%);
+    height: calc(2rem + 20%);
+    border-radius: 50%;
+    margin-block-start: calc(1rem + 4%);
+}
+
+.user-name {
+    font-weight: 600;
+    margin-block-end: 0;
+}
+
+.location {
+    color: var(--fifth-color);
+    font-weight: 700;
+}
+ 
+.bio {
+    font-weight: 400;
+    margin-block-start: calc(2.5rem + 1vh);
+    margin-block-end: calc(2.5rem + 1vh);
+}
+
+.social-links p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 4rem);
+    margin-block: 1.28rem;
+    margin-inline: auto;
+    height: calc(2.8rem + 1vh);
+    background-color: var(--third-color);
+    padding: 1%;
+    border-radius: 0.4rem;
+}
+
+.social-links p:active {
+    background-color: var(--fifth-color);
+    
+}
+
+.social-links p:hover {
+    transform: scale(1.02);
+}
+
+.social-links p:focus {
+    border: 0.2rem solid var(--fifth-color);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--fourth-color);
+    font-weight: 700;
+}
+
+.link:active {
+    color: var(--main-color); 
+}*/
