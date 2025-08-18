@@ -1,41 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yesteryear&display=swap');
 
-img {
-    width: 100%;
+
+:root {
+    --bodyYT: #fffdfc;
+    --compYT: #fffdfd;
+    --compYT2: #fffffe;
+    --bodyGry: hsl(0, 0%, 8%);
+    --compGry: hsl(0, 0%, 12%);
+    --compGry2: hsl(0, 0%, 20%);
+    --bright:  hsl(75, 94%, 57%);
+    --shadow:   rgba(0, 0, 0, 0.2);
 }
 
-/* :root {
-    --main-color:hsl(0, 0%, 8%) ;
-    --sec-color: hsl(0, 0%, 12%);
-    --third-color: hsl(0, 0%, 20%);
-    --fourth-color: hsl(0, 0%, 100%);
-    --fifth-color:  hsl(75, 94%, 57%);
-    --sixth-color: hsl(228, 45%, 44%);
-} 
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
 
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-family: 'Inter', sans-serif ;
-    background-color: var(--main-color);
-    color: var(--fourth-color);
-    font-size: 1.4rem;
-    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--bodyYT);
+    color: var(--bodyGry);
+    font-size: 1.5rem;
+
 }
 
 .body-content-wrapper {
-    width: clamp(32rem, 90%, 37.5rem);
-    margin-block: calc(10rem + 1vh);
+    width: clamp(32rem, 100vw, 37.5rem);
+    margin-block: 0;
     margin-inline: auto;
+    padding: calc(1rem + 1%);
+    position: relative;
 }
 
+
+header {
+    height: calc(6rem + 1vh);
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    background-color: var(--bodyYT);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(3rem + 1%);
+    box-shadow: 0rem 0.01rem 1rem var(--shadow);
+
+}
+
+header a {
+    text-decoration: none;
+    color: var(--bodyGry);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    gap: calc(3rem + 1%);
+}
+
+nav ul li {
+    width: auto;
+
+}
+
+main {
+    margin-block: calc(8rem + 1vh);
+
+}
+
+
+.heading, .profile-card {
+    text-align: center;
+}
+
+
+section {
+    margin-block: calc(8rem + 5vh);
+}
+
+.sec-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+
+.pictures img {
+    width: 100%;
+    border-radius: calc(0.8rem + 1%);
+}
+
+.socail-links-profile {
+    background-color: var(--bodyGry);
+    color: var(--bodyYT);
+}
+
+
 .profile-card {
-    width: calc(100% - 5rem);
+    width: calc(100% - 8rem);
     margin-block: calc(5rem + 1vh);
     margin-inline: auto;
-    background-color: var(--sec-color);
+    background-color: var(--compGry);
     padding: 5%;
     border-radius:calc(0.2rem + 1%) ;
 }
@@ -53,7 +131,7 @@ body {
 }
 
 .location {
-    color: var(--fifth-color);
+    color: var(--bright);
     font-weight: 700;
 }
  
@@ -71,13 +149,13 @@ body {
     margin-block: 1.28rem;
     margin-inline: auto;
     height: calc(2.8rem + 1vh);
-    background-color: var(--third-color);
+    background-color: var(--compGry2);
     padding: 1%;
     border-radius: 0.4rem;
 }
 
 .social-links p:active {
-    background-color: var(--fifth-color);
+    background-color: var(--bright);
     
 }
 
@@ -91,10 +169,10 @@ body {
 
 .link {
     text-decoration: none;
-    color: var(--fourth-color);
+    color: var(--bodyYT);
     font-weight: 700;
 }
 
 .link:active {
-    color: var(--main-color); 
-}*/
+    color: var(--bodyGry); 
+}
