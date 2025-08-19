@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yesteryear&display=swap');
 
 
+
+
 :root {
     --bodyYT: #fffdfc;
-    --compYT: #fffdfd;
-    --compYT2: #fffffe;
+    --compYT: #f0f0f0;
+    --compYT2: #e0e0e0;
     --bodyGry: hsl(0, 0%, 8%);
     --compGry: hsl(0, 0%, 12%);
     --compGry2: hsl(0, 0%, 20%);
-    --bright:  hsl(75, 94%, 57%);
+    --bright: #DC143C;
+    --gradHeader: linear-gradient(to right, #FF69B4, #FF6B00);
+    --bright2:  hsl(75, 94%, 57%);
     --shadow:   rgba(0, 0, 0, 0.2);
 }
 
@@ -25,13 +29,12 @@ html {
 body {
     font-family: 'Noto Sans', sans-serif;
     background-color: var(--bodyYT);
-    color: var(--bodyGry);
+    color: var(--compGry);
     font-size: 1.5rem;
-
 }
 
 .body-content-wrapper {
-    width: clamp(32rem, 100vw, 37.5rem);
+    width: clamp(32rem, 95%, 37.5rem);
     margin-block: 0;
     margin-inline: auto;
     padding: calc(1rem + 1%);
@@ -39,8 +42,11 @@ body {
 }
 
 
+
+
 header {
-    height: calc(6rem + 1vh);
+    height: calc(4.5rem + 1%);
+    padding-block-start: calc(0.5rem + 1%);
     position: fixed;
     inset-block-start: 0;
     inset-inline-start: 0;
@@ -48,7 +54,7 @@ header {
     background-color: var(--bodyYT);
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     gap: calc(3rem + 1%);
     box-shadow: 0rem 0.01rem 1rem var(--shadow);
 
@@ -59,6 +65,13 @@ header a {
     color: var(--bodyGry);
 }
 
+.logo {
+    height: calc(1rem + 5vh);
+    margin-block-end: calc(0.4rem + 1%);
+}
+
+
+/* Navigation styles */
 nav {
     display: flex;
     align-items: center;
@@ -73,18 +86,55 @@ nav ul {
 }
 
 nav ul li {
-    width: auto;
-
+    white-space: nowrap;
 }
+
+nav ul li a {
+    color: var(--bright);
+}
+
+
+
 
 main {
     margin-block: calc(8rem + 1vh);
 
 }
 
-
 .heading, .profile-card {
     text-align: center;
+}
+
+.heading p {
+    font-style: italic;
+}
+
+
+/* Heading animation styles */
+.type-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-inline-end: 0.24rem solid transparent;
+    width: 0;
+    animation: 
+    typing 3s steps(20, end) forwards,
+    blinking 0.85s step-end 6;
+}
+
+@keyframes typing {
+    from {width: 0; }
+    to {width: 100%;}
+}
+
+@keyframes blinking {
+    from, to {border-color: transparent; }
+    50% {border-color: var(--bodyGry); }
 }
 
 
@@ -97,23 +147,43 @@ section {
     font-size: 1.6rem;
 }
 
+.quote {
+    margin-block-start: calc(4rem + 1%);
+    font-size: calc(1em + 40%);
+    font-family: 'Yesteryear', cursive;
+}
 
 .pictures img {
     width: 100%;
     border-radius: calc(0.8rem + 1%);
 }
 
-.socail-links-profile {
-    background-color: var(--bodyGry);
-    color: var(--bodyYT);
+.img-container {
+    margin-inline: auto;
+} 
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
+
+.gallery-item {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    object-fit: cover;
+}
+
+
+
 
 
 .profile-card {
     width: calc(100% - 8rem);
     margin-block: calc(5rem + 1vh);
     margin-inline: auto;
-    background-color: var(--compGry);
+    background-color: var(--compYT);
     padding: 5%;
     border-radius:calc(0.2rem + 1%) ;
 }
@@ -121,6 +191,7 @@ section {
 .user-avatar {
     width: calc(2rem + 20%);
     height: calc(2rem + 20%);
+    border: 0.2rem solid var(--bright);
     border-radius: 50%;
     margin-block-start: calc(1rem + 4%);
 }
@@ -149,13 +220,14 @@ section {
     margin-block: 1.28rem;
     margin-inline: auto;
     height: calc(2.8rem + 1vh);
-    background-color: var(--compGry2);
+    background-color: var(--compYT2);
     padding: 1%;
     border-radius: 0.4rem;
 }
 
 .social-links p:active {
     background-color: var(--bright);
+    color: var(--bodyYT);
     
 }
 
@@ -169,10 +241,16 @@ section {
 
 .link {
     text-decoration: none;
-    color: var(--bodyYT);
+    color: var(--bodyGry);
     font-weight: 700;
 }
 
 .link:active {
     color: var(--bodyGry); 
+}
+
+
+.attribution p{
+    font-size: 1.1rem;
+    text-align: center;
 }
