@@ -15,14 +15,33 @@
  <div class="body-content-wrapper">
     
     <header>
-        <svg class="icon"><use href="#icon-menu-bars"></use></svg>
+        <div id="menu-icon" aria-label="Menu icon">
+          <svg class="icon"><use href="#icon-menu-bars"></use></svg>
+        </div>
         <nav id="nav">
-            <ul>
-                <li><a href="#about"><svg class="icon"><use href="#icon-profile"></use></svg>About</a></li>
-                <li><a href="#pictures"><svg class="icon"><use href="#icon-camera"></use></svg>Gallery</a></li>
-                <li><a href="#socail-links-profile"><svg class="icon"><use href="#icon-social-profile"></use></svg>Social Links</a></li>
+            <ul id="menu-list">
+                <li>
+                  <div aria-label="Home icon">
+                    <a href="https://rabkashamba.github.io/gallery/"><svg class="icon"><use href="#icon-home"></use></svg>Home</a>
+                  </div>
+                </li> 
+                <li>
+                  <div  aria-label="About section icon">
+                    <a href="#about"><svg class="icon"><use href="#icon-profile"></use></svg>About</a>
+                  </div>
+                </li>
+                <li>
+                  <div  aria-label="gallery section icon">
+                    <a href="#pictures"><svg class="icon"><use href="#icon-camera"></use></svg>Gallery</a>
+                  </div>
+                </li>
+                <li>
+                  <div aria-label="social links section icon">
+                    <a href="#socail-links-profile"><svg class="icon"><use href="#icon-social-profile"></use></svg>Social Links</a>
+                  </div>
+                </li>
             </ul>
-            <div id="close-btn">
+            <div id="close-btn" aria-label="menu close button">
                 X
             </div>
         </nav>
@@ -32,7 +51,7 @@
             </a>
         </div>
     </header>
-    <main>
+    <main id="main">
         <div class="heading">
             <h1 class="type-container"><span class="animated-text">Welcome to My Gallery</span></h1>
             <p>This is my offical gallery showcasing not necessarily the images themselves, but that I'm a little of a creator myself</p>

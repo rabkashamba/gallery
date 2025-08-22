@@ -1,13 +1,13 @@
-const menuIcon = document.getElementById("icon-menu-bars");
+const menuIcon = document.getElementById("menu-icon");
 const nav = document.getElementById("nav");
-const profile = document.getElementById("icon-profile");
-const gallery = document.getElementById("icon-camera");
-const social = document.getElementById("icon-social-profile");
+const main = document.getElementById("main");
+const menuList = document.getElementById("menu-list");
 const closeBtn =  document.getElementById("close-btn");
 
 
 const menuDisplay = () => {
    nav.style.display = "flex";
+   main.addEventListener("click", menuHide);
 }
 
 const menuHide = () => {
@@ -17,5 +17,4 @@ const menuHide = () => {
 
 menuIcon.addEventListener("click", menuDisplay);
 closeBtn.addEventListener("click", menuHide);
-profile.addEventListener("click", menuHide);
-gallery.addEventListener("click", menuHide);
+menuList.addEventListener("click", menuHide);

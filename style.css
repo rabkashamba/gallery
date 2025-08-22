@@ -15,6 +15,7 @@
     --gradHeader: linear-gradient(to right, #FF69B4, #FF6B00);
     --bright2:  hsl(75, 94%, 57%);
     --shadow:   rgba(0, 0, 0, 0.2);
+    --headYT: hsl(0, 0%, 0%);
 }
 
 
@@ -64,9 +65,13 @@ header {
 }
 
 header a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: var(--bodyGry);
+    color: var(--colorYT);
+
 }
+
 
 .logo {
     height: calc(1rem + 5vh);
@@ -78,10 +83,10 @@ header a {
 nav {
     display: none;
     position: fixed;
-    inset-block-start: 0.5rem;
+    inset-block-start: 0;
     inset-inline-start: 0;
-    height: 95vh;
-    width: 60%;
+    height: 100vh;
+    width: 80%;
     border-radius: 0 calc(0.6rem + 1%) calc(0.6rem + 1%) 0;
     background-color: var(--bodyYT); 
 }
@@ -104,6 +109,8 @@ nav ul {
 .icon {
     width: 3rem;
     height: 3rem;
+    fill: none;
+    stroke: var(--bright);
     color: var(--bright);
     margin: 1rem;
 }
@@ -122,6 +129,9 @@ main {
     font-style: italic;
 }
 
+h1 {
+    color: var(--headYT);
+}
 
 /* Heading animation styles */
 /* .type-container {
@@ -162,8 +172,7 @@ section {
 
 .quote {
     margin-block-start: calc(4rem + 1%);
-    font-size: calc(1em + 40%);
-    font-family: 'Yesteryear', cursive;
+ 
 }
 
 .pictures img {
@@ -171,13 +180,15 @@ section {
     border-radius: calc(0.8rem + 1%);
 }
 
-/* .img-container {
-    width: 100%;
-}  */
+.img-container {
+    width: calc(100% - 4rem);
+    margin-inline: auto;
+} 
 
 .gallery-container {
     display: flex;
-    overflow-x: auto;
+    gap: calc(0.1rem + 1%);
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
@@ -195,7 +206,7 @@ section {
 /* Profile Card starts here */
 
 .profile-card {
-    width: calc(100% - 4rem);
+    width: calc(100% - 6rem);
     margin-block: calc(5rem + 1%);
     margin-inline: auto;
     background-color: var(--compYT);
