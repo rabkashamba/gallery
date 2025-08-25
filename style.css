@@ -4,18 +4,17 @@
 
 
 :root {
-    --bodyYT: #fffdfc;
+    --bodyLit: #fffdfc;
+    --colorLit: #48525c;
+    --bodyDark: #1e1e1e;
+    --colorDark: #fffdfc;
     --compYT: #f0f0f0;
     --compYT2: #e0e0e0;
-    --colorYT: #48525C;
-    --bodyGry: hsl(0, 0%, 8%);
     --compGry: hsl(0, 0%, 12%);
     --compGry2: hsl(0, 0%, 20%);
     --bright: #DC143C;
-    --gradHeader: linear-gradient(to right, #FF69B4, #FF6B00);
     --bright2:  hsl(75, 94%, 57%);
-    --shadow:   rgba(0, 0, 0, 0.2);
-    --headYT: hsl(0, 0%, 0%);
+    --shadow:   rgba(255, 255, 255, 0.2);
 }
 
 
@@ -33,8 +32,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Noto Sans', sans-serif;
-    background-color: var(--bodyYT);
-    color: var(--colorYT);
+    background-color: var(--bodyDark);
+    color: var(--colorDark);
     font-size: 1.5rem;
 }
 
@@ -55,7 +54,7 @@ header {
     inset-block-start: 0;
     inset-inline-start: 0;
     inset-inline-end: 0;
-    background-color: var(--bodyYT);
+    background-color: var(--bodyDark);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -68,15 +67,14 @@ header a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--colorYT);
+    color: var(--colorDark);
 
 }
 
-
-.logo {
-    height: calc(1rem + 5vh);
-    margin-block-end: calc(0.4rem + 1%);
+header p {
+    font-family: 'Yesteryear', cursive;
 }
+
 
 
 /* Navigation styles */
@@ -88,18 +86,22 @@ nav {
     height: 100vh;
     width: 80%;
     border-radius: 0 calc(0.6rem + 1%) calc(0.6rem + 1%) 0;
-    background-color: var(--bodyYT); 
+    background-color: var(--bodyDark); 
 }
 
 nav ul {
+    height: 40%;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    padding: calc(1rem + 1%);
     list-style-type: none;
-    gap: calc(3rem + 1%);
+    gap: calc(2rem + 1%);
 }
 
+
+
 #close-btn {
+    font-size: 2rem;
     position: absolute;
     inset-block-start: 1rem;
     inset-inline-end: 1rem;
@@ -107,8 +109,8 @@ nav ul {
 
 
 .icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     fill: none;
     stroke: var(--bright);
     color: var(--bright);
@@ -121,17 +123,19 @@ main {
 
 }
 
-.heading, .profile-card {
+.heading {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
+
 
 .heading p {
     font-style: italic;
 }
 
-h1 {
-    color: var(--headYT);
-}
 
 /* Heading animation styles */
 /* .type-container {
@@ -206,10 +210,11 @@ section {
 /* Profile Card starts here */
 
 .profile-card {
+    text-align: center;
     width: calc(100% - 6rem);
     margin-block: calc(5rem + 1%);
     margin-inline: auto;
-    background-color: var(--compYT);
+    background-color: var(--compGry);
     padding: 5%;
     border-radius:calc(0.2rem + 1%) ;
 }
@@ -217,7 +222,6 @@ section {
 .user-avatar {
     width: calc(2rem + 20%);
     height: calc(2rem + 20%);
-    border: 0.2rem solid var(--bright);
     border-radius: 50%;
     margin-block-start: calc(1rem + 4%);
 }
@@ -246,14 +250,14 @@ section {
     margin-block: 1.28rem;
     margin-inline: auto;
     height: calc(2.8rem + 1vh);
-    background-color: var(--compYT2);
+    background-color: var(--compGry2);
     padding: 1%;
     border-radius: 0.4rem;
 }
 
 .social-links p:active {
     background-color: var(--bright);
-    color: var(--bodyYT);
+    color: var(--bodyLit);
     
 }
 
@@ -267,7 +271,7 @@ section {
 
 .link {
     text-decoration: none;
-    color: var(--colorYT);
+    color: var(--bodyLit);
     font-weight: 700;
 }
 
