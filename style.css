@@ -143,33 +143,6 @@ main {
 }
 
 
-/* Heading animation styles */
-/* .type-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.animated-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-inline-end: 0.24rem solid transparent;
-    width: 100%;
-    animation: 
-    typing 3s steps(20, end) forwards,
-    blinking 0.85s step-end 6;
-}
-
-@keyframes typing {
-    from {width: 0; }
-    to {width: 100%;}
-}
-
-@keyframes blinking {
-    from, to {border-color: transparent; }
-    50% {border-color: var(--bodyGry); }
-} */
-
 
 section {
     margin-block: calc(8rem + 5vh);
@@ -185,15 +158,27 @@ section {
  
 }
 
-.pictures img {
-    width: 100%;
-    border-radius: calc(0.8rem + 1%);
+.pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+    margin-inline: auto;
 }
 
 .img-container {
-    width: calc(100% - 4rem);
+    width: 100%;
+    height: 100%;
     margin-inline: auto;
-} 
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(0.8rem + 1%);
+}
+
+ 
 
 .gallery-container {
     display: flex;
