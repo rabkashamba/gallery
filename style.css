@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yesteryear&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Sonsie+One&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Croissant+One&family=Sonsie+One&display=swap');
 
 
 :root {
@@ -38,9 +34,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Noto Sans', sans-serif;
-    background-color: var(--bodyDark);
-    color: var(--colorDark);
-    font-size: 1.5rem;
+    background-color: var(--bodyLit);
+    color: var(--colorLit);
+    font-size: 1.4rem;
 }
 
 .body-content-wrapper {
@@ -49,7 +45,6 @@ body {
     padding: calc(1rem + 1%);
     position: relative;
 }
-
 
 
 
@@ -86,6 +81,8 @@ header p {
 /* Navigation styles */
 nav {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     inset-block-start: 0;
     inset-inline-start: 0;
@@ -102,6 +99,7 @@ nav ul {
     padding: calc(1rem + 1%);
     list-style-type: none;
     gap: calc(2rem + 1%);
+     
 }
 
 
@@ -111,6 +109,7 @@ nav ul {
     position: absolute;
     inset-block-start: 1rem;
     inset-inline-end: 1rem;
+    color: var(--bodyLit);
 }
 
 
@@ -119,9 +118,16 @@ nav ul {
     height: 2rem;
     fill: none;
     stroke: var(--bright);
-    color: var(--bright);
     margin: 1rem;
 }
+
+.social-media-links {
+    padding: calc(1rem + 1%);
+    display: flex;
+}
+
+
+
 
 
 main {
@@ -131,17 +137,42 @@ main {
 
 .heading {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
+h1 {
+    font-size: 2.8rem;
+}
 
 .heading p {
     font-style: italic;
 }
 
+
+/* Heading animation styles */
+.type-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-inline-end: 0.24rem solid transparent;
+    animation: 
+    typing 3s steps(20, end) forwards,
+    blinking 0.85s step-end 6;
+}
+
+@keyframes typing {
+    from {width: 0; }
+    to {width: 100%;}
+}
+
+@keyframes blinking {
+    from, to {border-color: transparent; }
+    50% {border-color: var(--colorLit); }
+}
 
 
 section {
@@ -205,7 +236,7 @@ section {
     width: calc(100% - 6rem);
     margin-block: calc(5rem + 1%);
     margin-inline: auto;
-    background-color: var(--compGry);
+    background-color: var(--compYT);
     padding: 5%;
     border-radius:calc(0.2rem + 1%) ;
 }
@@ -241,7 +272,7 @@ section {
     margin-block: 1.28rem;
     margin-inline: auto;
     height: calc(2.8rem + 1vh);
-    background-color: var(--compGry2);
+    background-color: var(--compYT2);
     padding: 1%;
     border-radius: 0.4rem;
 }
@@ -262,7 +293,7 @@ section {
 
 .link {
     text-decoration: none;
-    color: var(--bodyLit);
+    color: var(--colorLit);
     font-weight: 700;
 }
 
