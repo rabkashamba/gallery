@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Croissant+One&family=Sonsie+One&display=swap');
 
-
 :root {
     --bodyLit: #fffdfc;
     --colorLit: #48525c;
@@ -19,10 +18,10 @@
     --colorLink: hsl(263, 55%, 52%);
 }
 
-
 html, body{
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -46,8 +45,6 @@ body {
     position: relative;
 }
 
-
-
 header {
     height: calc(4.5rem + 1%);
     padding-block-start: calc(0.5rem + 1%);
@@ -61,7 +58,7 @@ header {
     align-items: center;
     gap: calc(4rem + 1%);
     border-block-end: 0.1rem solid var(--borderDark);
-
+    z-index: 1;
 }
 
 header a {
@@ -76,8 +73,6 @@ header a {
     font-size: 1.6rem;
 }
 
-
-
 /* Navigation styles */
 nav {
     display: none;
@@ -89,7 +84,7 @@ nav {
     inset-block-end: 0;
     width: 80%;
     border-radius: 0 calc(0.6rem + 1%) calc(0.6rem + 1%) 0;
-    background-color: var(--bodyDark); 
+    background-color: var(--bodyDark);
 }
 
 nav ul {
@@ -102,8 +97,6 @@ nav ul {
      
 }
 
-
-
 #close-btn {
     font-size: 2rem;
     position: absolute;
@@ -111,7 +104,6 @@ nav ul {
     inset-inline-end: 1rem;
     color: var(--bodyLit);
 }
-
 
 .icon {
     width: 2rem;
@@ -126,7 +118,6 @@ nav ul {
     display: flex; 
 }
 
-
 .site-info {
     display: flex;
     justify-content: center;
@@ -138,7 +129,6 @@ nav ul {
 
 main {
     margin-block: calc(8rem + 1vh);
-
 }
 
 .heading {
@@ -153,9 +143,6 @@ h1 {
     font-style: italic;
 }
 
-
-
-
 section {
     margin-block: calc(8rem + 5vh);
 }
@@ -167,7 +154,6 @@ section {
 
 .quote {
     margin-block-start: calc(4rem + 1%);
- 
 }
 
 .pictures {
@@ -190,7 +176,11 @@ section {
     border-radius: calc(0.8rem + 1%);
 }
 
- 
+/* NEW: Styles for the scrollable galleries */
+.gallery-wrapper {
+    position: relative;
+    grid-column: 1 / -1; /* Make the gallery span the full width */
+}
 
 .gallery-container {
     display: flex;
@@ -206,9 +196,45 @@ section {
     object-fit: cover;
 }
 
+.scroll-arrows {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+    pointer-events: none; /* Allows clicks to pass through */
+}
 
+.icon-arrow {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--bright);
+    stroke: var(--bright);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    pointer-events: auto; /* Re-enable clicks for the arrows */
+}
 
+.icon-arrow:hover {
+    transform: scale(1.2) translateY(-50%);
+    opacity: 1;
+}
 
+/* NEW: Image fade-in animation on scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Profile Card starts here */
 
@@ -277,7 +303,6 @@ section {
     color: var(--colorDark);
     font-weight: 700;
 }
-
 
 .attribution p {
     font-size: 1.1rem;
