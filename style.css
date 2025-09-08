@@ -130,8 +130,9 @@ nav ul {
 .site-info {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 1.1rem;
-    margin-block-end: calc(1rem + 3%);
+    margin-block-end: calc(1rem + 2%);
 }
               
 
