@@ -73,6 +73,22 @@ header a {
     font-size: 1.6rem;
 }
 
+
+
+/* .notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--colorLink);
+    height: calc(2.8rem + 1%);
+    font-size: 1.1rem;
+    z-index: 3;
+} */
+
 /* Navigation styles */
 nav {
     display: none;
@@ -191,6 +207,7 @@ section {
     display: flex;
     gap: 0.3rem;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
