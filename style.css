@@ -45,20 +45,40 @@ body {
     position: relative;
 }
 
-header {
-    height: calc(4.5rem + 1%);
-    padding-block-start: calc(0.5rem + 1%);
+
+.header-wrapper {
     position: fixed;
     inset-block-start: 0;
     inset-inline-start: 0;
-    inset-inline-end: 0;
+    inset-inline-end: 0; 
     background-color: var(--bodyDark);
+    z-index: 2;
+}
+
+
+.notification {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--colorLink);
+    height: calc(2.8rem + 1%);
+    font-size: 1.1rem;
+}
+
+#close-noti-btn svg {
+    stroke: currentColor;
+}
+
+
+header {
+    height: calc(4.5rem + 1%);
+    padding-block-start: calc(0.5rem + 1%);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: calc(4rem + 1%);
     border-block-end: 0.1rem solid var(--borderDark);
-    z-index: 2;
+    
 }
 
 header a {
@@ -75,19 +95,7 @@ header a {
 
 
 
-/* .notification {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--colorLink);
-    height: calc(2.8rem + 1%);
-    font-size: 1.1rem;
-    z-index: 3;
-} */
+
 
 /* Navigation styles */
 nav {
@@ -114,11 +122,9 @@ nav ul {
 }
 
 #close-btn {
-    font-size: 2rem;
     position: absolute;
     inset-block-start: 1rem;
     inset-inline-end: 1rem;
-    color: var(--bodyLit);
 }
 
 .icon {
@@ -144,7 +150,7 @@ nav ul {
               
 
 main {
-    margin-block: calc(8rem + 1vh);
+    margin-block: calc(8rem + 5vh);
 }
 
 .heading {
