@@ -68,3 +68,44 @@ galleryWrappers.forEach((wrapper, index) => {
         });
     }
 });
+
+
+
+
+const figure = document.querySelector(".heading figure");
+const slides = figure.children;
+
+let scrollInterval; 
+
+function startScrolling() {
+  scrollInterval = setInterval(() => {
+    
+    const scrollPosition = figure.scrollLeft;
+    const slideWidth = slides[0].offsetWidth;
+    const totalWidth = figure.scrollWidth;
+
+ 
+    const nextScrollPosition = scrollPosition + slideWidth;
+    
+    if (nextScrollPosition >= totalWidth) {
+      figure.scrollLeft = 0; 
+    } else {
+      
+      figure.scrollTo({
+        left: nextScrollPosition,
+        behavior: "smooth"
+      });
+    }
+  }, 3000);
+}
+
+
+function stopScrolling() {
+  clearInterval(scrollInterval);
+}
+
+
+startScrolling();
+
+figure.addEventListener('mouseenter', stopScrolling);
+figure.addEventListener('mouseleave', startScrolling);
