@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://rabkashamba.github.io/gallery/</loc>
-<lastmod>2025-09-15T16:38:37+02:00</lastmod>
+<lastmod>2025-09-19T16:29:16+02:00</lastmod>
 </url>
 <url>
 <loc>https://rabkashamba.github.io/gallery/about.html</loc>
-<lastmod>2025-09-12T15:52:08+02:00</lastmod>
+<lastmod>2025-09-19T16:29:16+02:00</lastmod>
+</url>
+<url>
+<loc>https://rabkashamba.github.io/gallery/album.html</loc>
+<lastmod>2025-09-19T16:29:16+02:00</lastmod>
 </url>
 </urlset>
