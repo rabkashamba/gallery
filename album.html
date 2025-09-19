@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Peep into Rabson Kashamba's life by having a glance at some of his photos across the years">
+    <meta name="robots" content="noimageindex">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rabkashamba.github.io/gallery/about.html">
-    <meta property="og:title" content="Rabson Kashamba | About">
-    <meta property="og:description" content="I'm a development economist and writer, curious about how things work, with an inextinguishable drive to become a creator.">
+    <meta property="og:url" content="https://rabkashamba.github.io/gallery/album.html">
+    <meta property="og:title" content="Rabson Kashamba | Gallery">
+    <meta property="og:description" content="A curated collection of photos and memories from Rabson Kashamba's life.">
     <meta property="og:image" content="https://rabkashamba.github.io/gallery/Images/rabson-kashamba-avatar.png">
     <meta property="og:image:alt" content="A closeup digital line drawing of Rabson Kashamba">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rabkashamba.github.io/gallery/about.html">
+    <meta property="twitter:url" content="https://rabkashamba.github.io/gallery/album.html">
     <meta property="twitter:title" content="Rabson Kashamba | Gallery">
-    <meta property="twitter:description" content="I'm a development economist and writer, curious about how things work, with an inextinguishable drive to become a creator.">
+    <meta property="twitter:description" content="A curated collection of photos and memories from Rabson Kashamba's life.">
     <meta property="twitter:image" content="https://rabkashamba.github.io/gallery/Images/rabson-kashamba-avatar.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Images/rabson-kashamba-favicon.png" type="image/x-icon">
 
-    <title>Rabson Kashamba | About</title>
+    <title>Rabson Kashamba | Photo Album</title>
 </head>
 <body>
-   
+
  <div class="body-content-wrapper">
-    
+
 <div class="header-wrapper">
       <div class="notification">
           <svg class="icon"><use href="#icon-info"></use></svg>
@@ -54,7 +55,7 @@
                   </div>
                 </li>
                 <li>
-                  <div  aria-label="gallery section icon">
+                  <div  aria-label="Photo album mode">
                      <a href="album.html"><svg class="icon"><use href="#icon-album"></use></svg>Album Mode</a>
                   </div>
                 </li>
@@ -93,50 +94,17 @@
         </div>
     </header>  
 </div>
-    <main id="main">
-        
-        <section class="about" id="about">
-            <p>Rabson Kashamba is a Development Economist and writer from Malawi. He is the author of the poetry collection "Whispers from Within," and the romance short story collection, "Fickle Fragile Flames." His writing reflects his deep connection to Malawi and explores a wide range of human experiences, from introspective reflections to the complexities of romantic relationships. Kashamba's unique blend of analytical thinking, informed by his work in development economics, and creative expression, makes his writing both insightful and engaging.</p>
-            <blockquote class="quote"><p>"I'm a development economist and writer, curious about how things work, with an inextinguishable drive to become a creator."</p></blockquote>
-            
-        </section>
+    <main id="album-wrapper">
 
-        <section class="socail-links-profile" id="socail-links-profile">
-
-            <div class="profile-card">
-                <img class="user-avatar" src="Images/rabson-kashamba-avatar.png" alt="Rabson Kashamba avatar">
-                <h2 class="user-name">Rabson Kashamba</h2>
-                <p class="location">Mchinji, Malawi</p>
-                <p class="bio">"Development Economist and Writer."</p>
-                <div class="social-links">
-                    <a class="link" href="https://github.com/rabkashamba" target="_blank">
-                        <p>GitHub</p>
-                    </a>
-                     <a class="link" href="https://frontendmentor.io/profile/rabkashamba" target="_blank">
-                        <p>Frontend Mentor</p>
-                    </a>
-                    <a class="link" href="https://www.linkedin.com/in/kashambar" target="_blank">
-                        <p>LinkedIn</p>
-                    </a>
-                    <a class="link" href="https://twitter.com/rabkashamba" target="_blank">
-                        <p>Twitter</p>
-                    </a>
-                    <a class="link" href="https://www.instagram.com/kashambarab" target="_blank">
-                        <p>Instagram</p>
-                    </a>
-                </div>
-            </div>
-
-        </section>
+        <div id="album"></div>
 
     </main>
     <footer class="attribution">
-        <p>© <time datetime="2025">2025</time><a href="https://rabkashamba.github.io/gallery/"> Rabson Kashamba. </a>All rights reserved</p>
+        <p>© <time datetime="2025">2025</time><a href="https://rabkashamba.github.io/gallery/"> Rabson Kashamba.</a>All rights reserved</p>
     </footer>
     </div>
+   
 
-   
-   
    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
 
   <symbol id="icon-home" viewBox="0 0 24 24" fill="none">
@@ -227,5 +195,36 @@
 </svg>
 
 <script src="script.js" defer></script>
+<script src="js/page-flip.browser.js"></script>
+<script>
+    const pageFlip = new St.PageFlip(document.getElementById('album'), {
+    width: 300,
+    height: 500,
+});
+
+const photos =  ["assets/leather-cover.png",
+               "Images/rabson-kashamba-graduation-one.jpg", "Images/rabson-kashamba-graduation-two.jpg", 
+               "Images/rabson-kashamba-finale-dinner-2.jpg", "Images/rabson-kashamba-finale-dinner-1.jpg",
+                "Images/rabson-kashamba-portrait.jpg", "Images/Rabson-kashamba-with-pc.jpg",
+                "Images/rabson-kashamba-cad.jpg", "Images/rabson-kashamba-striped-shirt.jpg",
+                "Images/rabson-kashamba-hall.jpg", "Images/rabson-kashamba-on-a-bench-1.jpg",
+                "Images/rabson-kashamba-on-a-bench-2.jpg","Images/rabson-kashamba-on-a-bench-3.jpg",
+                "Images/rabson-kashamba-cali-2.jpg", "Images/rabson-kashamba-studio-pic.jpg",
+                "assets/leather-cover-back.png"
+               ];
+
+pageFlip.loadFromImages(photos);
+
+window.addEventListener('resize', () => {
+
+    const newWidth = window.innerWidth * 0.9;
+    const newHeight = newWidth * 1.5;
+
+    pageFlip.update({
+        width: newWidth,
+        height: newHeight
+    });
+});
+</script>
 </body>
 </html>

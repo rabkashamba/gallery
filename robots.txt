@@ -1,0 +1,9 @@
+User-agent: * 
+Allow:  /
+
+User-agent: Googlebot-Image 
+Disallow:  /assets/
+
+Crawl-delay:  10 
+
+Sitemap:  https://rabkashamba.github.io/gallery/sitemap.xml
